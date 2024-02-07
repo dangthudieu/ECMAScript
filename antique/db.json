@@ -1,0 +1,103 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "ICE"
+    },
+    {
+      "id": "2",
+      "name": "HOT"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "cate_id": 2,
+      "name": "Hot Cappuccino",
+      "price": "30.000",
+      "image": "menu-item-1.jpg",
+      "description": "Espresso + Steamed Milk + Vanilla Syrup",
+      "addDate": "12/1/2024",
+      "status": "1"
+    },
+    {
+      "id": "2",
+      "name": "Hot Americano",
+      "cate_id": 2,
+      "price": "30.000",
+      "image": "menu-item-2.jpg",
+      "description": "Espresso + Steamed Milk + Vanilla Syrup",
+      "addDate": "12/1/2024",
+      "status": "1"
+    },
+    {
+      "id": "3",
+      "name": "Hot Latte #FC6",
+      "cate_id": 2,
+      "price": "30.000",
+      "image": "menu-item-3.jpg",
+      "description": "Espresso + Steamed Milk + Vanilla Syrup",
+      "addDate": "12/1/2024",
+      "status": "1"
+    },
+    {
+      "id": "4",
+      "name": "Hot Espresso",
+      "cate_id": 2,
+      "price": "30.000",
+      "image": "menu-item-4.jpg",
+      "description": "Espresso + Steamed Milk + Vanilla Syrup",
+      "addDate": "12/1/2024",
+      "status": "1"
+    },
+    {
+      "id": "5",
+      "name": "Iced Cappuccino",
+      "cate_id": 1,
+      "price": "30.000",
+      "image": "menu-item-5.jpg",
+      "description": "Espresso + Steamed Milk + Vanilla Syrup",
+      "addDate": "12/1/2024",
+      "status": "1"
+    },
+    {
+      "id": "6",
+      "name": "Iced Americano",
+      "cate_id": 1,
+      "price": "30.000",
+      "image": "menu-item-6.jpg",
+      "description": "Espresso + Steamed Milk + Vanilla Syrup",
+      "addDate": "12/1/2024",
+      "status": "1"
+    },
+    {
+      "id": "7",
+      "name": "Iced Milky Latte",
+      "cate_id": 1,
+      "price": "30.000",
+      "image": "menu-item-7.jpg",
+      "description": "Espresso + Steamed Milk + Vanilla Syrup",
+      "addDate": "12/1/2024",
+      "status": "1"
+    },
+    {
+      "id": "8",
+      "name": "Iced Espresso",
+      "cate_id": 1,
+      "price": "30.000",
+      "image": "menu-item-8.jpg",
+      "description": "Espresso + Steamed Milk + Vanilla Syrup",
+      "addDate": "12/1/2024",
+      "status": "1"
+    }
+  ],
+  "order_details": [
+    {
+      "order_id": 1,
+      "product_id": 1,
+      "quantity": 1,
+      "unit_price": "30.000",
+      "id": "29d9"
+    }
+  ]
+}

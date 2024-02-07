@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ hàng</title>
+
+    <link
+      rel="icon"
+      class=""
+      href="../uploads/img/menu-item-1.jpguploads/img/antique-cafe-logo-01.jpg"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&family=Oswald:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+    />
+
+    <!-- Các script khác ở đây -->
+
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="../css/tailwind.css" />
+    <link rel="stylesheet" href="../css/tooplate-antique-cafe.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js"
+      defer
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Trong phần body của file HTML -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h2>Giỏ hàng</h2>
+            </div>
+            <table class="table border">
+              <thead>
+                <tr>
+                  <td>STT</td>
+                  <td>Hình</td>
+                  <td>Tên</td>
+                  <td>Số Lượng</td>
+                  <td>GIá</td>
+                  <td></td>
+                </tr>
+              </thead>
+              <tbody id="cart-list"></tbody>
+            </table>
+
+            <div class="card-body">
+              <p id="total-price" class="total-price">Tổng cộng: 0 VNĐ</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h2>Thông tin khách hàng</h2>
+            </div>
+            <div class="card-body">
+              <form id="customerForm">
+                <div class="form-group">
+                  <label for="customerName">Họ và tên:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="customerName"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="customerAddress">Địa chỉ:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="customerAddress"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="customerEmail">Email:</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="customerEmail"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="customerPhoneNumber">Số điện thoại:</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="customerPhoneNumber"
+                    required
+                  />
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-success"
+                  onclick="PayCart()"
+                >
+                  Thanh toán
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="../js/main.js"></script> -->
+    <script src="../js/detailProduct.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
