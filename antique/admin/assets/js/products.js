@@ -15,8 +15,9 @@ function productsTable(data) {
             <td>
                 <span class="text-secondary ml-5 text-xs font-weight-bold">${i + 1}</span>
             </td>
+            <input type="hidden" id="id" name="id" value="${element.id}"/>
             <td>
-                <div class="d-flex px-2 py-1">
+                <div class="d-flex px-2 py-1">  
                     <div>
                         <img src="../../uploads/img/${element.image}" class="avatar avatar-sm me-3" alt="user1">
                     </div>
@@ -40,10 +41,10 @@ function productsTable(data) {
             </a> 
             </td>
             <td class="align-middle">
-            <a href="#" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" onclick="deleteProductId(${element.id})" data-original-title="Delete product">
+            <a href="#" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" onclick="deleteProductId(${element.id})" data-original-title="Delete">
             Delete
-         </a>
-            </td>
+        </a>
+                    </td>
             <td></td>
         </tr>`;
     }
@@ -53,11 +54,17 @@ function productsTable(data) {
 
 function editProduct(productId) {
     window.location.href = `../pages/edit_product.html?id=${productId}  `;
-} 
+}
 
-function deleteProduct(productId) {
-    console.log(productId);
-    axios.delete(API_URL + API_PRODUCT + productId)
+
+function deleteProductId(id) {
+    if (confirm("Bạn chắc xóa chứ!")) {
+        deleteProduct(id);
+    }
+}
+
+function deleteProduct(id) {
+    axios.delete(API_URL + API_PRODUCT + id)
         .then(response => {
             window.location.href = "../pages/tables.html";
         })
@@ -65,15 +72,6 @@ function deleteProduct(productId) {
             console.error("Lỗi khi xóa sản phẩm", error);
         });
 }
-
-function deleteProductId(productId) {
-    if (confirm("Bạn chắc xóa chứ!")) {
-        deleteProduct(productId);
-    }
-}
-
-
-
 
 async function fetchAPI() {
     try {
@@ -99,31 +97,26 @@ function addProduct() {
     const year = today.getFullYear();
     const formatDate = `${day}/${month}/${year}`
 
+    const id = Math.random(0, 9999).toString();
     const name = document.getElementById("name").value;
     const cate_id = document.getElementById("cate_id").value;
     const price = document.getElementById("price").value;
 
-    //Xử lí hàm mang file hìnhconst 
-    const imageInput = document.getElementById("image").files[0];
-    const image = imageInput.files.length > 0 ? imageInput.files[0] : null;
-
-
-    
-
-
+    const image = document.getElementById("image").value;
     const description = document.getElementById("description").value;
     const addDate = formatDate;
     const status = document.getElementById("status").value;
 
 
     // bắt lỗi chung 
-    if (!name || !cate_id || !price || !image || !description || !addDate || !status) {
+    if (!name || !cate_id || !price || !description || !addDate || !status) {
         alert("Vui lòng nhập đầy đủ form có *.");
         return false;
     }
 
     //tạo 1 ofject chứ các thông tin valeu nhập từ form 
     const newProduct = {
+        "id": id,
         "name": name,
         "cate_id": cate_id,
         "price": price,

@@ -43,21 +43,22 @@ function categoriesProduct(categories) {
   categories.forEach(element => {
     html += `
     <li class="inline-block  mb-4 mx-4">
-    <a href="../client/categories.html?cate_id=${element.id}" class=" px-4 py-2">${element.name}</a>
+    <a href="./client/categories.html?cate_id=${element.id}" class=" px-4 py-2">${element.name}</a>
     </li>
     `
   });
   return html;
 
 }
-
-
 fetch(API_URL + API_CATEGORIES)
   .then(function (response) {
     response.json().then(function (categories) {
       document.getElementById('categories').innerHTML = categoriesProduct(categories);
     })
   })
+
+
+
 
 
 fetch(API_URL + API_PRODUCT)

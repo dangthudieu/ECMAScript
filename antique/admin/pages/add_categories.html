@@ -71,14 +71,14 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="../pages/tables.html">
+            <a class="nav-link " href="../pages/tables.html">
               <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
               </div>
               <span class="nav-link-text ms-1">Product</span>
             </a>
           </li><li class="nav-item">
-            <a class="nav-link " href="../pages/tables_categories.html">
+            <a class="nav-link active" href="../pages/tables_categories.html">
               <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
               </div>
@@ -360,54 +360,23 @@
           <div class="col-12">
             <div class="card mb-4">
               <div class="card-header pb-0">
-                <h6>CHỈNH SỬA SẢN PHẨM</h6>
+                <h6>THÊM MỚI DANH MỤC</h6>
                 
               </div>
               <div class="card-body px-0 pt-0 pb-2">
                 <div class="table-responsive p-0">
-                  <form id="editProductForm" action="">
+                  <form action="">
                     <input type="hidden" name="id" id="id">
-                    <div class="row p-2 col-12">
-                      <div class="col-lg-6">
-                        <label for="">Tên Sản Phẩm</label>
-                        <input type="text" name="name" id="name" placeholder="Nhập Tên Sản Phẩm" class="form-control" />
+                    <div class="row p-5 col-12">
+                      <div class="col-lg-12">
+                        <label for="">Tên Danh Mục</label>
+                        <input type="text" name="name" id="name" placeholder="Nhập Tên Danh Mục" class="form-control" />
                       </div>
-                      <div class="col-lg-6">
-                        <label for="">Loại Sản Phẩm</label>
-                        <select class="form-control" name="cate_id" id="cate_id">
-                          <option value="1">Hot</option>
-                          <option value="2">Cold</option>
-                        </select>
-                        
+                      <div class="d-flex pt-3 justify-content-lg-end">
+                        <button type="button" class=" d-flex btn btn-primary" onclick="addCate()">THÊM</button>
                       </div>
-                      <div class="col-lg-6">
-                          <label for="">Giá</label>
-                          <input type="number" name="price" id="price" placeholder="Nhập Giá SẢN PHẨM" class="form-control" />
-                        </div>
-                       
-                        <div class="col-lg-6">
-                          <label for="">Hình Ảnh Sẩn Phẩm</label>
-                          <input type="file" name="image" id="image"  class="form-control" />
-                        </div>
-                        <div class="col-lg-6">
-                          <label for="">Mô Tả</label>
-                          <input type="text" name="description" id="description" placeholder="Nhập Mô Tả Tại Đây" class="form-control" />
-                        </div> 
-                        <div class="col-lg-6">
-                          <label for="">Ngày Nhập</label>
-                          <input type="text" name="addDate" id="addDate" placeholder="Ngày Tự Động Cập Nhật" class="form-control" />
-                        </div> 
-                        <div class="col-lg-6">
-                          <label for="">Trạng Thái</label>
-                          <select class="form-control" name="status" id="status">
-                            <option value="1">Hiển Thị</option>
-                            <option value="0">Ẩn</option>
-                          </select>
-                        </div>
-                        <div class="d-flex justify-content-lg-end">
-                          <button type="button" class=" d-flex btn btn-primary" onclick="update()">CẬP NHẬT</button>
-                        </div>
                     </div>
+                    
                         
                   </form>
                 </div>
@@ -627,13 +596,9 @@
         </div>
       </div>
     </div>
-    <!--   Core JS Files   --><!-- Remove one of the Axios script tags -->
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-<script src="../assets/js/products.js"></script>
-
-    <script src="../assets/js/product_edit.js"></script>
+    <!--   Core JS Files   -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../assets/js/categories.js"></script>
     <script src="../assets/js/core/popper.min.js"></script>
     <script src="../assets/js/core/bootstrap.min.js"></script>
     <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>

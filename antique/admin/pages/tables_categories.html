@@ -43,14 +43,14 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="../pages/tables.html">
+          <a class="nav-link " href="../pages/tables.html">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">Product</span>
           </a>
         </li><li class="nav-item">
-          <a class="nav-link " href="../pages/tables_categories.html">
+          <a class="nav-link active" href="../pages/tables_categories.html">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
             </div>
@@ -246,8 +246,8 @@
         <div class="col-12">
           <div class="card mb-4">
             <div class="card-header d-flex justify-content-lg-between pb-0">
-              <h6>DÁNH SÁCH SẢN PHẨM</h6>
-             <a href="../pages/add_product.html" class="btn btn-primary "> 
+              <h6>DÁNH SÁCH DANH MỤC</h6>
+             <a href="../pages/add_categories.html" class="btn btn-primary "> 
               THÊM
             </a>
             </div>
@@ -257,15 +257,12 @@
                   <thead>
                     <tr>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">STT</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Sản Phẩm</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Giá</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Trạng Thái</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Ngày nhập</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Danh Mục</th>
                       <th class="text-secondary opacity-7"></th>
                       <th class="text-secondary opacity-7"></th>
                     </tr>
                   </thead>
-                  <tbody id="products_admin">
+                  <tbody id="categories_admin">
 
                   </tbody>
                 </table>
@@ -386,7 +383,7 @@
 <!-- Thêm đoạn mã này vào phần head hoặc trước khi sử dụng Axios -->
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-<script src="../assets/js/products.js"></script>
+<script src="../assets/js/categories.js"></script>
 <script src="../assets/js/core/popper.min.js"></script>
 <script src="../assets/js/core/bootstrap.min.js"></script>
 <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
